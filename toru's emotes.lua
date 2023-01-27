@@ -147,7 +147,7 @@ animsbindable = Instance.new("BindableFunction")
 animsbindable.OnInvoke = animsbuttonfunction
 
 mouse.KeyDown:connect(function(key)
-	if key:lower() == "e" or key:upper()=="E" then
+	if key:lower() == "u" or key:upper()=="U" then
             setclipboard("Around Town, Top Rock, Fashionable, Robot, Twirl, Jacks, T, Shy, Monkey, Borock's Rage, Ud'zal's Summoning, Hype Dance, Swoosh, Sneaky, Side to Side, Greatest, Louder, Hero Landing, Curtsy, Idol, Cower, Fancy Feet, Flowing Breeze, Boxing Punch, Power Blast, Bodybuilder, Hips Poppin, Panini, HOLIDAY, Rodeo Dance, Cobra, Dancin Shoes, Quiet Waves, Floss, Show Dem Wrists, Old Town Road, Wake Up Call, Shuffle, Lasso Turn, Dizzy, Tree, Zombie, AOK, Sleep, Country Line Dance, Fake Cha Cha, Hero Landing, On The Outside, Break Dance, Cha Cha, Up and Down, Heart Skip, Cat Man, Piano Jump, Sidekicks, High Hands, It aint my fault, Cartwheel, Elevate, Victory, Super Charge, Dorky dance, Saturday dance, Line Dance")
             toclipboard("Around Town, Top Rock, Fashionable, Robot, Twirl, Jacks, T, Shy, Monkey, Borock's Rage, Ud'zal's Summoning, Hype Dance, Swoosh, Sneaky, Side to Side, Greatest, Louder, Hero Landing, Curtsy, Idol, Cower, Fancy Feet, Flowing Breeze, Boxing Punch, Power Blast, Bodybuilder, Hips Poppin, Panini, HOLIDAY, Rodeo Dance, Cobra, Dancin Shoes, Quiet Waves, Floss, Show Dem Wrists, Old Town Road, Wake Up Call, Shuffle, Lasso Turn, Dizzy, Tree, Zombie, AOK, Sleep, Country Line Dance, Fake Cha Cha, Hero Landing, On The Outside, Break Dance, Cha Cha, Up and Down, Heart Skip, Cat Man, Piano Jump, Sidekicks, High Hands, It aint my fault, Cartwheel, Elevate, Victory, Super Charge, Dorky dance, Saturday dance, Line Dance")
             game.StarterGui:SetCore("SendNotification", {
