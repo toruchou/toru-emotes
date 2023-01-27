@@ -3,6 +3,8 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Player = Players.LocalPlayer
 local UserInputService = game:GetService("UserInputService")
+local Char = speaker.Character
+local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local Humanoid = character:WaitForChild("Humanoid")
@@ -150,7 +152,9 @@ animsbindable.OnInvoke = animsbuttonfunction
 task.spawn(function()
 	while task.wait() do
 		if Humanoid.MoveDirection.Magnitude > 1 then
-            AnimationTrack:Stop()
+            		for i,v in next, Hum:GetPlayingAnimationTracks() do
+				v:Stop()
+			end
         end
     end
 end)
