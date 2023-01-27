@@ -2,6 +2,7 @@
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Player = Players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
 
 RunService.Stepped:Connect(function()
     for _, CoPlayer in pairs(Players:GetChildren()) do
@@ -78,7 +79,7 @@ Sleep = 4686925579;
 ["Cha Cha"] = 3695322025;
 ["Up and Down"] = 7422797678;
 ["Heart Skip"] = 11309255148;
-["Cat Man"] = 11435175895;
+["Cat Man"] = 11444441914;
 ["Piano Jump"] = 11453082181;
 ["Sidekicks"] = 10370362157;
 ["High hands"] = 10714361543;
@@ -143,6 +144,22 @@ end
 animsbindable = Instance.new("BindableFunction")
 animsbindable.OnInvoke = animsbuttonfunction
 
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if input.UserInputType == Enum.UserInputType.Keyboard then
+        if input.KeyCode == Enum.KeyCode.U then
+            setclipboard("Around Town, Top Rock, Fashionable, Robot, Twirl, Jacks, T, Shy, Monkey, Borock's Rage, Ud'zal's Summoning, Hype Dance, Swoosh, Sneaky, Side to Side, Greatest, Louder, Hero Landing, Curtsy, Idol, Cower, Fancy Feet, Flowing Breeze, Boxing Punch, Power Blast, Bodybuilder, Hips Poppin, Panini, HOLIDAY, Rodeo Dance, Cobra, Dancin Shoes, Quiet Waves, Floss, Show Dem Wrists, Old Town Road, Wake Up Call, Shuffle, Lasso Turn, Dizzy, Tree, Zombie, AOK, Sleep, Country Line Dance, Fake Cha Cha, Hero Landing, On The Outside, Break Dance, Cha Cha, Up and Down, Heart Skip, Cat Man, Piano Jump, Sidekicks, High Hands, It aint my fault, Cartwheel, Elevate, Victory, Super Charge, Dorky dance, Saturday dance")
+            toclipboard("Around Town, Top Rock, Fashionable, Robot, Twirl, Jacks, T, Shy, Monkey, Borock's Rage, Ud'zal's Summoning, Hype Dance, Swoosh, Sneaky, Side to Side, Greatest, Louder, Hero Landing, Curtsy, Idol, Cower, Fancy Feet, Flowing Breeze, Boxing Punch, Power Blast, Bodybuilder, Hips Poppin, Panini, HOLIDAY, Rodeo Dance, Cobra, Dancin Shoes, Quiet Waves, Floss, Show Dem Wrists, Old Town Road, Wake Up Call, Shuffle, Lasso Turn, Dizzy, Tree, Zombie, AOK, Sleep, Country Line Dance, Fake Cha Cha, Hero Landing, On The Outside, Break Dance, Cha Cha, Up and Down, Heart Skip, Cat Man, Piano Jump, Sidekicks, High Hands, It aint my fault, Cartwheel, Elevate, Victory, Super Charge, Dorky dance, Saturday dance")
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "Hello friend!";
+                Text = "A list of the available emotes has been copied to your clipboard, enjoy the script!";
+                Icon = "rbxassetid://11560692108";
+                Button1 = "Thank you!";
+                Duration = 24;
+            })
+        end
+    end
+end)
+
 game.StarterGui:SetCore("SendNotification", {
     Title = "Done injecting!";
     Text = "CMD Anymations Script by toru!";
@@ -155,6 +172,4 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Say /e EMOTENAME to use that emote! (Shortened names work!)";
     Icon = "rbxassetid://2541869220";
     Duration = 8;
-    Callback = animsbindable;
-    Button1 = "Print emote names";
 })
