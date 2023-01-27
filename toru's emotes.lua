@@ -2,7 +2,8 @@
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Player = Players.LocalPlayer
-local UserInputService = game:GetService("UserInputService")
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
 
 RunService.Stepped:Connect(function()
     for _, CoPlayer in pairs(Players:GetChildren()) do
@@ -145,9 +146,8 @@ end
 animsbindable = Instance.new("BindableFunction")
 animsbindable.OnInvoke = animsbuttonfunction
 
-UserInputService.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.Keyboard then
-        if input.KeyCode == Enum.KeyCode.U then
+mouse.KeyDown:connect(function(key)
+	if key:lower() == "e" or key:upper()=="E" then
             setclipboard("Around Town, Top Rock, Fashionable, Robot, Twirl, Jacks, T, Shy, Monkey, Borock's Rage, Ud'zal's Summoning, Hype Dance, Swoosh, Sneaky, Side to Side, Greatest, Louder, Hero Landing, Curtsy, Idol, Cower, Fancy Feet, Flowing Breeze, Boxing Punch, Power Blast, Bodybuilder, Hips Poppin, Panini, HOLIDAY, Rodeo Dance, Cobra, Dancin Shoes, Quiet Waves, Floss, Show Dem Wrists, Old Town Road, Wake Up Call, Shuffle, Lasso Turn, Dizzy, Tree, Zombie, AOK, Sleep, Country Line Dance, Fake Cha Cha, Hero Landing, On The Outside, Break Dance, Cha Cha, Up and Down, Heart Skip, Cat Man, Piano Jump, Sidekicks, High Hands, It aint my fault, Cartwheel, Elevate, Victory, Super Charge, Dorky dance, Saturday dance, Line Dance")
             toclipboard("Around Town, Top Rock, Fashionable, Robot, Twirl, Jacks, T, Shy, Monkey, Borock's Rage, Ud'zal's Summoning, Hype Dance, Swoosh, Sneaky, Side to Side, Greatest, Louder, Hero Landing, Curtsy, Idol, Cower, Fancy Feet, Flowing Breeze, Boxing Punch, Power Blast, Bodybuilder, Hips Poppin, Panini, HOLIDAY, Rodeo Dance, Cobra, Dancin Shoes, Quiet Waves, Floss, Show Dem Wrists, Old Town Road, Wake Up Call, Shuffle, Lasso Turn, Dizzy, Tree, Zombie, AOK, Sleep, Country Line Dance, Fake Cha Cha, Hero Landing, On The Outside, Break Dance, Cha Cha, Up and Down, Heart Skip, Cat Man, Piano Jump, Sidekicks, High Hands, It aint my fault, Cartwheel, Elevate, Victory, Super Charge, Dorky dance, Saturday dance, Line Dance")
             game.StarterGui:SetCore("SendNotification", {
@@ -157,8 +157,7 @@ UserInputService.InputBegan:Connect(function(input)
                 Button1 = "Thank you!";
                 Duration = 24;
             })
-        end
-    end
+	end
 end)
 
 game.StarterGui:SetCore("SendNotification", {
