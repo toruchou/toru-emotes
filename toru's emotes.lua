@@ -3,6 +3,9 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Player = Players.LocalPlayer
 local UserInputService = game:GetService("UserInputService")
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local Humanoid = character:WaitForChild("Humanoid")
 
 RunService.Stepped:Connect(function()
     for _, CoPlayer in pairs(Players:GetChildren()) do
@@ -143,6 +146,14 @@ end
 
 animsbindable = Instance.new("BindableFunction")
 animsbindable.OnInvoke = animsbuttonfunction
+
+task.spawn(function()
+	while task.wait() do
+		if Humanoid.MoveDirection.Magnitude > 1 then
+            AnimationTrack:Stop()
+        end
+    end
+end)
 
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if input.UserInputType == Enum.UserInputType.Keyboard then
