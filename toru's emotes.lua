@@ -162,7 +162,7 @@ end)
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Done injecting!";
-    Text = "CMD Anymations Script by toru!";
+    Text = "CMD Anymations Script by toru, Press U to get the list of emotes!";
     Icon = "rbxassetid://847562022";
     Duration = 5;
 })
