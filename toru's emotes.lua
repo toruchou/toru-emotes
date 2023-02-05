@@ -96,6 +96,7 @@ BLOOM = 10714007154;
 HYDRO = 10147823318;
 GEM = 10714008655;
 ["Line Dance"] = 10714383856;
+["Sticker dance move"] = 12259825026;
 }
 
 function PlayAnim(id)
